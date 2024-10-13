@@ -1,5 +1,5 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: Jetbrains Mono, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -12,7 +12,11 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 a {
   font-weight: 500;
   color: #646cff;
@@ -23,10 +27,7 @@ a:hover {
 }
 
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
+  background-color: #213547;
   min-height: 100vh;
 }
 
@@ -56,8 +57,9 @@ button:focus-visible {
 
 @media (prefers-color-scheme: light) {
   :root {
-    color: #213547;
-    background-color: #ffffff;
+    color: #747bff;
+    /* color: #213547; */
+    /* background-color: #ffffff; */
   }
   a:hover {
     color: #747bff;
@@ -65,4 +67,34 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+.navbar {
+  width: 100vw;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid white;
+}
+.navigation {
+  display: flex;
+  gap: 10px;
+
+  a {
+    padding: 5px 10px;
+    background-color: rgb(43, 38, 38);
+    border-radius: 5px;
+    will-change: filter;
+    transition: filter 300ms;
+    
+    &:hover {
+      text-decoration: underline;
+      filter: drop-shadow(0 0 2em #61dafbaa);
+    }
+  }
+  
+}
+.heading h1 {
+  color: white;
+  letter-spacing: 10px;
 }
